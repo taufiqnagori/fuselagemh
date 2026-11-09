@@ -1,0 +1,478 @@
+/* =========================================
+   FUSELAGE INNOVATIONS — FOOTER
+========================================= */
+
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  color: #d9e6dc;
+  background: #102d20;
+}
+
+/* CTA section */
+
+.footer-cta-section {
+  position: relative;
+  overflow: hidden;
+  padding: 65px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(ellipse at 90% 50%, rgba(48, 115, 70, 0.35), transparent 45%),
+    linear-gradient(110deg, #194a30, #123824);
+}
+
+.footer-cta-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.footer-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.footer-eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #f2c46e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.footer-cta-content h2 {
+  color: #ffffff;
+  font-size: clamp(30px, 4vw, 43px);
+  line-height: 1.18;
+  letter-spacing: -0.045em;
+}
+
+.footer-cta-content h2 span {
+  color: #f2c46e;
+}
+
+.footer-cta-content p {
+  max-width: 510px;
+  margin-top: 15px;
+  color: #c1d2c5;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer-cta-actions {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-cta-primary,
+.footer-cta-secondary {
+  display: flex;
+  min-width: 180px;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  transition: all 0.25s ease;
+}
+
+.footer-cta-primary {
+  color: #153b27;
+  background: #f2c46e;
+}
+
+.footer-cta-primary:hover {
+  background: #ffda91;
+  transform: translateY(-3px);
+}
+
+.footer-cta-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.footer-cta-secondary:hover {
+  border-color: #f2c46e;
+  color: #f2c46e;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-cta-decoration {
+  position: absolute;
+  right: 20%;
+  bottom: -140px;
+  display: flex;
+  gap: 12px;
+  opacity: 0.12;
+  transform: rotate(-30deg);
+  pointer-events: none;
+}
+
+.footer-cta-decoration span {
+  width: 65px;
+  height: 300px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+/* Main footer grid */
+
+.footer-main-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr 1fr 1.2fr;
+  gap: 45px;
+  padding-top: 65px;
+  padding-bottom: 60px;
+}
+
+.footer-brand-column {
+  max-width: 300px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo-mark {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 13px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo-mark svg {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-brand-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.footer-brand-titles strong {
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  line-height: 1;
+}
+
+.footer-brand-titles small {
+  color: #a9bdb0;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.27em;
+}
+
+.footer-brand-description {
+  margin-top: 23px;
+  color: #a9bdb0;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.footer-location-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 19px;
+  padding: 8px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: #c9d9cd;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.footer-location-chip span:first-child {
+  color: #f2c46e;
+}
+
+/* Footer columns */
+
+.footer-column-title {
+  margin-bottom: 24px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.footer-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+}
+
+.footer-link-list li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #a9bdb0;
+  font-size: 11px;
+  transition: all 0.2s ease;
+}
+
+.footer-link-list li a span {
+  color: #72937c;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.footer-link-list li a:hover {
+  color: #f2c46e;
+}
+
+.footer-link-list li a:hover span {
+  color: #f2c46e;
+  transform: translate(2px, -2px);
+}
+
+/* Contact information */
+
+.footer-contact-column {
+  min-width: 0;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 19px;
+}
+
+.footer-contact-icon {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #f2c46e;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 14px;
+}
+
+.footer-contact-item div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-contact-item strong {
+  color: #e5eee7;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.footer-contact-item a,
+.footer-contact-item div>span {
+  overflow-wrap: anywhere;
+  color: #a9bdb0;
+  font-size: 10px;
+  line-height: 1.7;
+  transition: color 0.2s ease;
+}
+
+.footer-contact-item a:hover {
+  color: #f2c46e;
+}
+
+/* Social links */
+
+.footer-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.footer-social-links a {
+  padding: 8px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 999px;
+  color: #c0d0c4;
+  font-size: 10px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.footer-social-links a:hover {
+  border-color: #f2c46e;
+  color: #f2c46e;
+}
+
+/* Bottom footer */
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0c2519;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  min-height: 65px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-bottom-inner p,
+.footer-made-note {
+  color: #8fa698;
+  font-size: 10px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-bottom-links a {
+  color: #a9bdb0;
+  font-size: 10px;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #f2c46e;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .footer-main-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 55px;
+  }
+
+  .footer-brand-column {
+    max-width: 380px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .footer-cta-section {
+    padding: 48px 0;
+  }
+
+  .footer-cta-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .footer-cta-content h2 {
+    font-size: clamp(29px, 8vw, 38px);
+  }
+
+  .footer-cta-content p {
+    font-size: 12px;
+  }
+
+  .footer-cta-actions {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .footer-cta-primary,
+  .footer-cta-secondary {
+    min-width: 0;
+    flex: 1;
+    padding: 0 12px;
+    font-size: 10px;
+  }
+
+  .footer-main-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 22px;
+    padding-top: 45px;
+    padding-bottom: 40px;
+  }
+
+  .footer-brand-column {
+    grid-column: 1 / -1;
+    max-width: 100%;
+  }
+
+  .footer-column-title {
+    margin-bottom: 18px;
+  }
+
+  .footer-link-list {
+    gap: 13px;
+  }
+
+  .footer-bottom-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .footer-made-note {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .footer-cta-actions {
+    flex-direction: column;
+  }
+
+  .footer-main-grid {
+    gap: 30px 15px;
+  }
+
+  .footer-contact-item {
+    gap: 8px;
+  }
+
+  .footer-contact-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .footer-cta-primary,
+  .footer-cta-secondary,
+  .footer-link-list li a,
+  .footer-link-list li a span,
+  .footer-contact-item a,
+  .footer-social-links a {
+    transition: none !important;
+  }
+}

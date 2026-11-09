@@ -1,0 +1,437 @@
+/* ========================================================
+   FUSELAGE MH — Subsidy Page Styles
+   ======================================================== */
+
+.subsidy-hero-banner {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  padding: 50px 0 40px;
+}
+
+.calc-wrapper-section {
+  background: var(--bg-base);
+}
+
+.subsidy-calc-card {
+  background: var(--bg-card);
+  border: 1.5px solid var(--primary-border);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  box-shadow: var(--shadow-md);
+}
+
+.calc-header-tag {
+  display: inline-flex;
+  margin-bottom: 24px;
+}
+
+.calc-header-tag span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-bg);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--primary-border);
+}
+
+.calc-dual-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+}
+
+.calc-inputs-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-step-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.step-label {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.category-select-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cat-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border);
+  background: var(--bg-card-alt);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.cat-option-btn:hover {
+  border-color: var(--primary-border);
+  background: var(--primary-bg);
+}
+
+.cat-option-btn.selected {
+  border-color: var(--primary);
+  background: var(--primary-bg);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+.cat-radio-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--bg-surface);
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.cat-option-btn.selected .cat-radio-circle {
+  border-color: var(--primary);
+  background: var(--primary);
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.cat-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.cat-text-wrap strong {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+}
+
+.cat-rate-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Drone Model Pills */
+.drone-select-pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.drone-pill-select {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border);
+  background: var(--bg-card-alt);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.drone-pill-select:hover {
+  border-color: var(--primary-border);
+}
+
+.drone-pill-select.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.drone-pill-select.active strong,
+.drone-pill-select.active span {
+  color: #fff;
+}
+
+.drone-pill-select strong {
+  font-size: 0.92rem;
+  color: var(--text-primary);
+}
+
+.drone-pill-select span {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Output Display Box */
+.calc-output-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.output-glass-box {
+  background: var(--bg-card-alt);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.breakdown-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.breakdown-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: -10px;
+}
+
+.financial-rows-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.fin-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.fin-row strong {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+}
+
+.subsidy-discount-row {
+  color: var(--accent);
+}
+
+.divider-row {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
+}
+
+.net-cost-row {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.net-price-value {
+  font-size: 1.5rem !important;
+  color: var(--primary) !important;
+  font-weight: 900;
+}
+
+.emi-estimate-row {
+  font-size: 0.78rem;
+  background: var(--primary-bg);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.emi-val {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.subsidy-note {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.calc-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Schemes Cards Grid */
+.schemes-info-section {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.schemes-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.scheme-info-card {
+  padding: 32px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.scheme-info-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.scheme-discount-badge {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--accent);
+}
+
+.scheme-card-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.scheme-cap-pill {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: var(--primary-bg);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  width: fit-content;
+}
+
+.scheme-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.scheme-card-footer {
+  margin-top: 10px;
+}
+
+/* Checklist Section */
+.checklist-section {
+  background: var(--bg-base);
+}
+
+.checklist-card {
+  background: var(--grad-warm);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.checklist-left {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.check-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.check-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.check-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.docs-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.docs-list li {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.checklist-right {
+  display: flex;
+  justify-content: center;
+}
+
+.help-box {
+  background: var(--bg-card);
+  border: 1.5px solid var(--primary-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 320px;
+}
+
+.help-icon {
+  font-size: 2.2rem;
+}
+
+.help-box h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.help-box p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .calc-dual-grid {
+    grid-template-columns: 1fr;
+  }
+  .schemes-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .checklist-card {
+    grid-template-columns: 1fr;
+    padding: 28px 18px;
+  }
+}
+

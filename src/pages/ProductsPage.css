@@ -1,0 +1,284 @@
+/* ========================================================
+   FUSELAGE MH — Products Catalog Styles
+   ======================================================== */
+
+.page-hero-banner {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+  padding: 50px 0 40px;
+}
+
+.catalog-filters {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-pill {
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+  border-color: var(--primary-border);
+  color: var(--primary);
+}
+
+.filter-pill.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: var(--shadow-xs);
+}
+
+/* Catalog Grid */
+.catalog-grid-section {
+  background: var(--bg-base);
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.catalog-drone-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.catalog-img-holder {
+  position: relative;
+  background: var(--bg-card-alt);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  border-bottom: 1px solid var(--border);
+}
+
+.catalog-img {
+  max-width: 300px;
+  max-height: 210px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.catalog-drone-card:hover .catalog-img {
+  transform: scale(1.05);
+}
+
+.catalog-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.catalog-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.catalog-cat {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.catalog-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.catalog-tagline {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.catalog-short-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.catalog-specs-table {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+
+.c-spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.c-spec-row strong {
+  color: var(--text-primary);
+}
+
+.cert-check {
+  color: var(--primary) !important;
+}
+
+.catalog-pricing-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+.price-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-lbl {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.price-val {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.subsidy-col .price-val {
+  color: var(--accent);
+}
+
+.catalog-cta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* Hub Stock Note */
+.hub-stock-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1.5px dashed var(--primary-border);
+  border-radius: var(--radius-lg);
+  padding: 18px 24px;
+  margin-top: 36px;
+}
+
+.stock-icon {
+  font-size: 1.8rem;
+}
+
+.hub-stock-note div {
+  flex: 1;
+}
+
+.hub-stock-note strong {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.hub-stock-note p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+/* Comparison Table */
+.comparison-section {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+}
+
+.table-responsive-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.88rem;
+}
+
+.comparison-table th {
+  background: var(--bg-card-alt);
+  padding: 14px 18px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.subsidy-badge-cell {
+  background: var(--accent-bg);
+  color: var(--accent);
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.no-subsidy-cell {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.table-link {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+  .hub-stock-note {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+

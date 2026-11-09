@@ -1,0 +1,80 @@
+/* =========================================
+   FUSELAGE INNOVATIONS — APPLICATION LAYOUT
+========================================= */
+
+.site-app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: clip;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.main-content-flow {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.main-content {
+  position: relative;
+  width: 100%;
+  flex: 1;
+}
+
+/* Consistent section spacing */
+.main-content>section {
+  width: 100%;
+}
+
+/* Smooth page appearance */
+.main-content>* {
+  animation: pageEnter 0.45s ease both;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Prevent horizontal overflow */
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .site-app-wrapper {
+    padding-bottom: 66px;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .main-content>* {
+    animation: none;
+  }
+}

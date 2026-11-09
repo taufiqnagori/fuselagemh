@@ -1,0 +1,170 @@
+/* ---- SUBSIDY ---- */
+.subsidy-section {
+  position: relative;
+  padding: var(--section-pad);
+  text-align: center;
+  overflow: hidden;
+}
+
+.subsidy-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(0, 255, 135, 0.08) 0%, transparent 60%),
+    linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-base) 100%);
+  pointer-events: none;
+}
+
+.subsidy-title {
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.subsidy-cards {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.subsidy-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--bg-border);
+  border-radius: 24px;
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.subsidy-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.card-0::before { background: linear-gradient(90deg, #00ff87, #0d9f5f); }
+.card-1::before { background: linear-gradient(90deg, #0066ff, #00ff87); }
+.card-2::before { background: linear-gradient(90deg, #ff6b35, #ff4499); }
+
+.subsidy-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 64px rgba(0, 102, 255, 0.2);
+  border-color: rgba(0, 255, 135, 0.2);
+}
+
+.card-2:hover {
+  box-shadow: 0 24px 64px rgba(255, 107, 53, 0.15);
+  border-color: rgba(255, 107, 53, 0.2);
+}
+
+.subsidy-badge {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #00ff87, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-2 .subsidy-badge {
+  background: linear-gradient(135deg, #ff6b35, #ff4499);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.subsidy-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.subsidy-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.subsidy-cap {
+  display: inline-block;
+  background: rgba(0, 255, 135, 0.08);
+  border: 1px solid rgba(0, 255, 135, 0.2);
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+
+.card-2 .subsidy-cap {
+  background: rgba(255, 107, 53, 0.08);
+  border-color: rgba(255, 107, 53, 0.2);
+  color: #ff6b35;
+}
+
+.subsidy-cta {
+  margin-top: 8px;
+  background: none;
+  border: 1px solid rgba(0, 255, 135, 0.3);
+  color: var(--primary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.subsidy-cta:hover {
+  background: rgba(0, 255, 135, 0.1);
+}
+
+/* Govt Strip */
+.govt-strip {
+  max-width: var(--max-width);
+  margin: 56px auto 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.govt-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.govt-logo:hover {
+  border-color: rgba(0, 255, 135, 0.2);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .subsidy-cards { grid-template-columns: 1fr; max-width: 480px; }
+}
+
+@media (max-width: 600px) {
+  .subsidy-section { padding: 70px 20px; }
+}
+
