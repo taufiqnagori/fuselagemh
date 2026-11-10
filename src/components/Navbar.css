@@ -730,3 +730,355 @@
     font-size: 11px;
   }
 }
+
+/* ==========================================
+   MOBILE NAVBAR + DRAWER FIX
+   Matches the current Navbar.jsx
+========================================== */
+
+@media (max-width: 900px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .nav-container {
+    display: flex;
+    width: 100%;
+    min-height: 68px;
+    padding-left: 12px;
+    padding-right: 12px;
+    gap: 8px;
+    justify-content: space-between;
+  }
+
+  .brand-logo {
+    min-width: 0;
+    flex: 1 1 auto;
+    gap: 7px;
+  }
+
+  .brand-titles {
+    min-width: 0;
+  }
+
+  .brand-name {
+    font-size: 16px;
+  }
+
+  .brand-state {
+    font-size: 8px;
+    letter-spacing: 0.12em;
+  }
+
+  .logo-emblem {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .logo-emblem svg {
+    width: 29px;
+    height: 29px;
+  }
+
+  .desktop-menu {
+    display: none !important;
+  }
+
+  .header-actions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 7px;
+  }
+
+  /* Keep language dropdown visible */
+  .lang-selector {
+    display: flex !important;
+    flex-shrink: 0;
+  }
+
+  .language-dropdown {
+    width: 94px;
+    height: 38px;
+    padding: 0 5px 0 8px;
+    border: 1px solid #dce7df;
+    border-radius: 10px;
+    background: #f7f9f6;
+    color: #176b45;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  /* Hide desktop-only controls */
+  .nav-quote-button,
+  .header-actions>.theme-toggle-btn {
+    display: none !important;
+  }
+
+  /* Show hamburger */
+  .mobile-toggle-btn {
+    display: flex !important;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid #e5ebe6;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+
+  .mobile-toggle-btn span {
+    display: block;
+    width: 19px;
+    height: 2px;
+    border-radius: 5px;
+    background: #176b45;
+    transition: all 0.25s ease;
+  }
+
+  .mobile-toggle-btn.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .mobile-toggle-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-toggle-btn.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Top utility bar */
+  .top-utility-inner {
+    min-height: 32px;
+    justify-content: center;
+  }
+
+  .utility-right {
+    display: none !important;
+  }
+
+  .utility-left {
+    justify-content: center;
+    font-size: 11px;
+  }
+
+  /* Drawer backdrop */
+  .mobile-menu-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1001;
+    background: rgba(10, 25, 17, 0.55);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .mobile-menu-backdrop.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* Drawer */
+  .mobile-nav-drawer {
+    position: fixed;
+    z-index: 1002;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(370px, 88vw);
+    height: 100dvh;
+    overflow-y: auto;
+    background: #ffffff;
+    color: #17231f;
+    visibility: hidden;
+    transform: translateX(105%);
+    transition:
+      transform 0.3s ease,
+      visibility 0.3s ease;
+    box-shadow: -12px 0 35px rgba(0, 0, 0, 0.15);
+  }
+
+  .mobile-nav-drawer.is-visible {
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .mobile-nav-inner {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    padding: 26px 22px 30px;
+    gap: 24px;
+  }
+
+  /* Drawer heading */
+  .mobile-menu-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5ebe6;
+  }
+
+  .mobile-menu-eyebrow {
+    display: block;
+    margin-bottom: 8px;
+    color: #176b45;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .mobile-menu-heading h2 {
+    color: #17231f;
+    font-size: 25px;
+    font-weight: 800;
+  }
+
+  .mobile-close-btn {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    place-items: center;
+    border: 1px solid #e5ebe6;
+    border-radius: 50%;
+    color: #176b45;
+    background: #f7f9f6;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  /* Drawer links */
+  .mobile-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid #e5ebe6;
+  }
+
+  .mobile-nav-link {
+    display: flex;
+    min-height: 58px;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 2px;
+    border-bottom: 1px solid #e5ebe6;
+    color: #35473c;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .mobile-nav-link.active {
+    color: #176b45;
+  }
+
+  .mobile-link-number {
+    color: #9ba79f;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .mobile-link-arrow {
+    margin-left: auto;
+    color: #176b45;
+    font-size: 18px;
+  }
+
+  /* Contact area */
+  .mobile-menu-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 8px;
+  }
+
+  .mobile-quote-button {
+    display: flex;
+    width: 100%;
+    min-height: 48px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 17px;
+    border-radius: 999px;
+    color: #ffffff;
+    background: #176b45;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .mobile-phone {
+    color: #176b45;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  /* No address in drawer */
+  .mobile-menu-contact p {
+    display: none !important;
+  }
+
+  .mobile-menu-settings {
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid #e5ebe6;
+  }
+
+  .mobile-theme-button {
+    min-height: 40px;
+    padding: 8px 14px;
+    border: 1px solid #e5ebe6;
+    border-radius: 999px;
+    color: #176b45;
+    background: #f7f9f6;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 380px) {
+  .nav-container {
+    padding-left: 9px;
+    padding-right: 9px;
+    gap: 5px;
+  }
+
+  .brand-name {
+    font-size: 14px;
+  }
+
+  .brand-state {
+    font-size: 7px;
+  }
+
+  .logo-emblem {
+    width: 32px;
+    height: 32px;
+  }
+
+  .language-dropdown {
+    width: 86px;
+    font-size: 11px;
+  }
+
+  .header-actions {
+    gap: 5px;
+  }
+}
