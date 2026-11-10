@@ -65,7 +65,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <LangProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/fuselagemh">
           <AppLayout />
         </BrowserRouter>
       </LangProvider>
